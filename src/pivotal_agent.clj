@@ -28,8 +28,8 @@
   (proxy [Agent] [guid version]
     (pollCycle []
       (let [{:keys [queue-data total-unacked total-ready] :as metrics} (rabbitmq-metrics)]
-        (if debug
-          (log/debug "Debug enabled, pretty printing metrics")
+        (when debug
+          (log/debug "Debug enabled, printing metrics")
           (pprint metrics))
         (.reportMetric this "Queued Messages/Unacknowledged" "messages" total-unacked)
         (.reportMetric this "Queued Messages/Ready" "messages" total-ready)
