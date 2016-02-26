@@ -1,4 +1,4 @@
-(ns pivotal-agent
+(ns rabbitmq-agent.core
   (:require [langohr.http :as lhttp]
             [clojure.set :refer [rename-keys]]
             [clojure.pprint :refer [pprint]]

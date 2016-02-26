@@ -1,6 +1,10 @@
-# pivotal-agent
+# rabbitmq-agent
 
-New Relic Agent for monitoring RabbitMQ.
+New Relic Agent for monitoring RabbitMQ
+
+## Disclaimer
+
+This agent is a rewrite of <https://github.com/pivotalsoftware/newrelic_pivotal_agent> Ruby-based agent (or RabbitMQ part of it). Authors of this plugin are not in control of the dashboard of the agent this replaces so one day it might stop working. No support guaranteed, use on your own responsibility.
 
 ## Prerequisities 
 
@@ -28,7 +32,7 @@ $ mvn install:install-file -Dfile=dist/metrics_publish-2.0.1.jar -DgroupId=newre
 - Clone this repository and run:
 
 ```bash
-$ git clone git@github.com:metosin/pivotal-agent.git
+$ git clone git@github.com:metosin/rabbitmq-agent.git
 $ cd pivotal-agent
 $ boot build
 ```
@@ -38,7 +42,7 @@ $ boot build
 * Must be located in *config/plugin.edn*
 
 ```clojure
-{:agent-name "rabbitmq dev"
+{:agent-name "rabbitmq_dev"
  :license-key "INSERT_NEW_RELIC_LICENSE_KEY"
  :url "http://localhost:15672"
  :user "user"
@@ -57,9 +61,9 @@ $ boot build
 ## Running
 
 ```bash
-java -jar target/pivotal-agent.jar
+java -jar target/rabbitmq-agent-*VERSION*.jar
 ```
 
 ## TODO
 
-* [ ] More informative error messages for missing configuration keys etc.
+* [ ] Informative error messages for missing configuration keys etc.
