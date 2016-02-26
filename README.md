@@ -6,13 +6,13 @@ New Relic Agent for monitoring RabbitMQ.
 
 ### For Building
 
-1. Clone <https://github.com/newrelic-platform/metrics_publish_java>
+- Clone <https://github.com/newrelic-platform/metrics_publish_java>
 
 ```bash
 $ git clone git@github.com:newrelic-platform/metrics_publish_java.git
 $ cd metrics_publish_java
 ```
-2. Install to the local Maven repository
+- Install to the local Maven repository
 
 ```bash
 $ mvn install:install-file -Dfile=dist/metrics_publish-2.0.1.jar -DgroupId=newrelic-platform \
@@ -25,9 +25,11 @@ $ mvn install:install-file -Dfile=dist/metrics_publish-2.0.1.jar -DgroupId=newre
 
 ## Building with boot
 
-Clone this repository and run:
+- Clone this repository and run:
 
 ```bash
+$ git clone git@github.com:metosin/pivotal-agent.git
+$ cd pivotal-agent
 $ boot build
 ```
 
